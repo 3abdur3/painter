@@ -1,0 +1,28 @@
+// ***** ABSTRACT ****
+@import "abstract/mixins";
+@import "abstract/functions";
+@import "abstract/variables";
+
+// ****BASE*****
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utility";
+
+// ****COMPONENTS*****
+@import "components/container";
+@import "components/bubbles";
+@import "components/buttons";
+@import "components/bg-video";
+@import "components/language";
+@import "components/menu";
+
+// ****LAYOUTS*****
+@import "layouts/navigation";
+@import "layouts/header";
+@import "layouts/about";
+@import "layouts/feature";
+@import "layouts/gallery";
+@import "layouts/testimonials";
+@import "layouts/cta";
+@import "layouts/footer";

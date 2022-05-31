@@ -1,0 +1,100 @@
+/* ***BUTTON*** */
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 10rem;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  &::after {
+    //These codes will create same size another hidden BUTTON
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+  }
+
+  &--blue {
+    background: var(--color-primary-light);
+    color: #fff;
+
+    &::after {
+      background: var(--color-primary-dark);
+    }
+  }
+
+  &--yellow {
+    background: var(--color-secondary-light);
+    color: #fff;
+
+    &::after {
+      background: var(--color-secondary-dark);
+    }
+  }
+
+  &--white {
+    background: #fff;
+    color: #333;
+
+    &::after {
+      background: #fff;
+    }
+  }
+}
+
+// FOR MOBILE SCREEN BUTTON
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  // cursor: pointer;
+  display: none; //Because, we want it will display only in mobile screen
+
+  // Below 900px for Tab (940px / 16px = 59em)
+  @include respond(tab-port) {
+    display: block;
+    z-index: 999;
+  }
+
+  &--icon {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 5rem;
+  }
+
+  &--icon[name="close"] {
+    // It means when the screen size is less then 900px, then it will show "menu" icon and "X" icon will be off
+    display: none;
+  }
+}

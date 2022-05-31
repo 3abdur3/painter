@@ -1,0 +1,80 @@
+.toggler {
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  z-index: 2;
+  /* because we alsways want it on the top of everything(there are now two background layers); */
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburger {
+  /* flex, becasue it will bring the emty <div> in colmun and can style just a line inside the checkbox to form 'hamburger' box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  z-index: 1;
+  /* 'z-index, because we want it to be under the'checkbox */
+  width: 5.5rem;
+  height: 5.5rem;
+  // background: orangered; //To test
+
+  &_line {
+    position: relative;
+    /* because child's(child of "line" will be "before and after" elements
+    which need to be 'position:absolute' */
+    width: 100%;
+    height: 0.5rem;
+    background: var(--color-primary-light);
+    transition: all 0.6s ease;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.5rem;
+      top: -1.5rem;
+      right: 2%;
+      background: inherit;
+      /* 'inherit' here means same as parent's which is #fff */
+      z-index: 1;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.5rem;
+      top: 1.5rem;
+      right: 2%;
+      background: inherit;
+      z-index: 1;
+    }
+  }
+}
+
+/* -----Toggler-animation---- */
+.toggler:checked + .hamburger > .hamburger_line {
+  /*We used here styling "checked", because we used 
+  CHECKBOX as a input type in html, means if the toggler is checked, then
+  manipulate hamburger_line */
+  transform: rotate(135deg);
+}
+
+/* ----Trun the lines into 'X----
+  it targets all '3 lines' that we creatd earlier */
+
+.toggler:checked + .hamburger > .hamburger_line:before,
+.toggler:checked + .hamburger > .hamburger_line:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+//This style is extra
+.toggler:checked:hover + .hamburger > .hamburger_line {
+  transform: rotate(225deg); //135+90=225
+}

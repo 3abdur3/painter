@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Best painter in Belgium" />
+
+    <!-- FAVICON(For DESKTOP 64by64) **?v-2 updates automatic faviconicon without deleting browser catch -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon/favicon-desktop.png?v=2"
+    />
+    <!-- FAVICON(For IOS/iPHONE 180by180) -->
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
+    <!-- FAVICON(For Android 192by192 and 512by512, BUT WE need to create a file-extention named "manifest.webmanifest" for ANDROID) -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- Google-fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Van Reeth &mdash; The painter in Belgium</title>
+
+    <!-- JS link for different actions -->
+    <script defer src="js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- NAVIGATION-SECTION -->
+      <div class="navigation">
+        <div class="navigation__logo">
+          <a href="#">
+            <img src="img/logo.png" alt="Logo" class="navigation__logo--img" />
+          </a>
+        </div>
+
+        <!-- <div class="mobile-navigation__background"></div> -->
+
+        <nav class="navigation__nav">
+          <ul class="navigation__nav-list">
+            <li><a href="#aboutMe" class="navigation__nav-link">About</a></li>
+            <li>
+              <a href="#speciality" class="navigation__nav-link">Speciality</a>
+            </li>
+            <li><a href="#gallery" class="navigation__nav-link">Gallery</a></li>
+            <li>
+              <a href="#testimonials" class="navigation__nav-link">
+                Tetsimonials
+              </a>
+            </li>
+            <li><a href="#contact" class="navigation__nav-link">Contact</a></li>
+          </ul>
+
+          <div class="language">
+            <a href="#" class="language__logo">
+              <img
+                src="img/uk.png"
+                alt="English Flag"
+                class="language__logo-img"
+              />
+              <img
+                src="img/nl.jpg"
+                alt="Nederland Flag"
+                class="language__logo-img"
+              />
+            </a>
+          </div>
+        </nav>
+        <!-- This button gonna shows-up only for mobile screen(probably with JS) -->
+        <button class="btn-mobile-nav">
+          <!-- Using svg
+            <svg class="btn-mobile-nav--icon" name="menu">
+            <use xlink:href="img/sprite.svg#icon-menu"></use>
+          </svg>
+          <svg class="btn-mobile-nav--icon" name="close">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg> -->
+          <!-- Better user interface for HAMBURGER menu -->
+          <input type="checkbox" class="toggler" />
+          <!-- 'checkbox' is for hamburburger functionality -->
+          <!-- 'hamburger'<div> to create hamburger  square-->
+          <div class="hamburger">
+            <div class="hamburger_line"></div>
+            <!-- This empty <div> to create line inside the hamburger square box -->
+          </div>
+        </button>
+      </div>
+
+      <!-- HEADER-SECTION -->
+      <header class="header">
+        <!-- PAINT-BUBBLES -->
+        <div class="bubbles">
+          <img src="img/paint/pink.png" alt="pink" class="bubbles-img" />
+          <img src="img/paint/blue.png" alt="blue" class="bubbles-img" />
+          <img src="img/paint/green.png" alt="green" class="bubbles-img" />
+          <img src="img/paint/red.png" alt="red" class="bubbles-img" />
+          <img src="img/paint/yellow.png" alt="yellow" class="bubbles-img" />
+          <img src="img/paint/black.png" alt="black" class="bubbles-img" />
+          <img src="img/paint/indigo.png" alt="indigo" class="bubbles-img" />
+        </div>
+
+        <div class="header__text">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">PaintWork</span>
+            <span class="heading-primary--sub">Is where quality matters</span>
+          </h1>
+          <a href="#gallery" class="btn btn--blue">Check more &darr;</a>
+        </div>
+      </header>
+      <!-- </div> -->
+
+      <main>
+        <!-- ABOUT-SECTION -->
+        <section class="about" id="aboutMe">
+          <div class="about__img">
+            <img src="img/marc.jpg" alt="owner" class="about__img--1" />
+          </div>
+          <div class="about__content">
+            <h3 class="subheading mb-sm">Marc Van Reeth</h3>
+            <h2 class="heading-secondary-sub mb-md">
+              &ldquo;Completely dedicated to creativity&ldquo;
+            </h2>
+            <p class="about__content-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consequuntur nesciunt explicabo pariatur voluptate dignissimos
+              ipsum nemo a aliquam tempora reiciendis. dolor sit amet,
+              consectetur adipisicing elit. Consequuntur nesciunt explicabo
+              pariatur voluptate dignissimos ipsum nemo a aliquam tempora
+              reiciendis
+              <br />
+              aliquam tempora reiciendis. dolor sit amet, consectetur
+              adipisicing elit. Consequuntur nesciunt explicabo pariatur
+              voluptate
+            </p>
+            <a href="#contact" class="btn btn--yellow">Contact</a>
+          </div>
+        </section>
+
+        <!-- FEATURE-SECTION -->
+        <section class="features" id="speciality">
+          <div class="tertiary-heading">
+            <span class="subheading">Speciality</span>
+            <h2 class="heading-secondary">Prior to your need</h2>
+          </div>
+
+          <div class="feature">
+            <div class="feature__box">
+              <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-home3"></use>
+              </svg>
+              <h4 class="feature__title">House/Appartment</h4>
+              <p class="feature__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                suscipit amet ipsum officiis beatae debitis?
+              </p>
+            </div>
+            <div class="feature__box">
+              <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-quill"></use>
+              </svg>
+              <h4 class="feature__title">Portrait</h4>
+              <p class="feature__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                suscipit amet ipsum officiis beatae debitis?
+              </p>
+            </div>
+            <div class="feature__box">
+              <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-paint-format"></use>
+              </svg>
+              <h4 class="feature__title">Wall Paintings</h4>
+              <p class="feature__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                suscipit amet ipsum officiis beatae debitis?
+              </p>
+            </div>
+            <div class="feature__box">
+              <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-hammer"></use>
+              </svg>
+              <h4 class="feature__title">Renovation</h4>
+              <p class="feature__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                suscipit amet ipsum officiis beatae debitis?
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- GALLERY-SECTION -->
+        <section class="gallery" id="gallery">
+          <figure class="gallery__item gallery__item--1">
+            <img
+              src="img/gallery/g-1.webp"
+              alt="Gallery img-1"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--2">
+            <img
+              src="img/gallery/g-2.webp"
+              alt="Gallery img-2"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--3">
+            <img
+              src="img/gallery/g-3.webp"
+              alt="Gallery img-3"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--4">
+            <img
+              src="img/gallery/g-4.webp"
+              alt="Gallery img-4"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--5">
+            <img
+              src="img/gallery/g-5.webp"
+              alt="Gallery img-5"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--6">
+            <img
+              src="img/gallery/g-6.webp"
+              alt="Gallery img-6"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--7">
+            <!-- <img src="img/gallery/g-7.jpg" alt="Gallery img-7" class="gallery__img" /> -->
+            <img
+              src="img/gallery/g-7.webp"
+              alt="Gallery img-7"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--8">
+            <img
+              src="img/gallery/g-8.webp"
+              alt="Gallery img-8"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--9">
+            <img
+              src="img/gallery/g-9.webp"
+              alt="Gallery img-9"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--10">
+            <img
+              src="img/gallery/g-10.webp"
+              alt="Gallery img-10"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--11">
+            <img
+              src="img/gallery/g-11.webp"
+              alt="Gallery img-11"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--12">
+            <img
+              src="img/gallery/g-12.webp"
+              alt="Gallery img-12"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--13">
+            <img
+              src="img/gallery/g-13.webp"
+              alt="Gallery img-13"
+              class="gallery__img"
+            />
+          </figure>
+          <figure class="gallery__item gallery__item--14">
+            <img
+              src="img/gallery/g-14.webp"
+              alt="Gallery img-14"
+              class="gallery__img"
+            />
+          </figure>
+        </section>
+
+        <!-- TESTIMONIALS-SECTION -->
+        <section class="testimonials" id="testimonials">
+          <div class="bg__video">
+            <video class="bg__video-content" autoplay muted loop>
+              <source src="img/color1.m4v" type="video/mp4" />
+              This video doesn't support your browser !!
+            </video>
+          </div>
+
+          <div class="tertiary-heading tertiary-heading--sub">
+            <span class="subheading">Reviews</span>
+            <h2 class="heading-secondary">Most recent client's feedbacks</h2>
+          </div>
+
+          <!-- ROW-1 -->
+          <div class="rivew">
+            <div class="rivew__box">
+              <figure class="rivew__user">
+                <img src="img/aldo.jpg" alt="Usre 1" class="rivew__user--img" />
+              </figure>
+              <figcaption class="rivew__user--caption">Aldo Simone</figcaption>
+              <blockquote class="rivew__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                voluptas dolorem, libero exercitationem deserunt repellat!
+              </blockquote>
+            </div>
+
+            <!-- ROW-2 -->
+            <div class="rivew__box">
+              <figure class="rivew__user">
+                <img src="img/dimi.jpg" alt="Usre 2" class="rivew__user--img" />
+              </figure>
+              <figcaption class="rivew__user--caption">Dimi</figcaption>
+              <blockquote class="rivew__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                voluptas dolorem, libero exercitationem deserunt repellat!
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta" id="contact">
+          <div class="cta__main">
+            <h2 class="cta__text">Dont hesitate to contact</h2>
+
+            <form action="#" class="cta__form" method="get">
+              <div class="cta__form--control">
+                <label for="full-name"></label>
+                <input id="full-name" type="text" placeholder="Full Name" />
+              </div>
+              <div class="cta__form--control">
+                <label for="email"></label>
+                <input id="email" type="text" placeholder="Your Email" />
+              </div>
+              <div class="cta__form--control">
+                <label for="message"></label>
+                <textarea
+                  type="text"
+                  id="message"
+                  cols="40"
+                  rows="6"
+                  placeholder="Your Message...."
+                ></textarea>
+              </div>
+              <input type="submit" class="btn btn--yellow" value="Send" />
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER-SECTION -->
+      <footer class="footer">
+        <svg class="footer__icon">
+          <use xlink:href="img/sprite.svg#icon-point-up"></use>
+        </svg>
+
+        <ul class="footer__nav">
+          <li class="footer__nav--item">
+            <img
+              src="img/logo.png"
+              class="footer__nav--img"
+              alt="Footer Logo"
+            />
+          </li>
+
+          <li class="footer__nav--item">
+            <a href="#contact" class="footer__nav--link">Contact</a>
+          </li>
+          <li class="footer__nav--item">
+            <a href="#" class="footer__nav--link">Privacy</a>
+          </li>
+          <li class="footer__nav--item">
+            <a href="#" class="footer__nav--link">Terms</a>
+          </li>
+          <li class="footer__nav--item">
+            <a href="#" class="footer__nav--link">Help & Support</a>
+          </li>
+        </ul>
+
+        <div class="footer__sub">
+          <p class="footer__sub--text">
+            Copyright &copy;
+            <span class="year">2021</span>
+            by Shupol | All Rights Reserved.
+          </p>
+
+          <ul class="footer__social">
+            <li>
+              <a class="footer__social--link">
+                <svg class="footer__social--icon">
+                  <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer__social--link">
+                <svg class="footer__social--icon">
+                  <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer__social--link">
+                <svg class="footer__social--icon">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

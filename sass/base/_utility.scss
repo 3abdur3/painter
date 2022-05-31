@@ -1,0 +1,51 @@
+//######  MARIN  #####
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
+}
+
+// FOR STICKY NAVIGATION
+.sticky {
+  position: fixed;
+  width: 120rem; //This number came through experimenting
+  background: rgba(255, 255, 255, 0.9);
+  margin-top: -8rem; //This number came through experimenting
+  z-index: 15;
+
+  @include respond(normal-phone) {
+    margin-top: none;
+  }
+}
+
+// This class is opened only to create navigation for TAB/mobile screen
+// This class works together with "navigation__nav" class beneth and executed with JS
+.nav-open {
+  // Below 900px for Tab (940px / 16px = 59em)
+  @include respond(tab-port) {
+    .navigation__nav {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+      // transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+      transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    .btn-mobile-nav--icon[name="close"] {
+      // It means, when "nav-open" class is active, the there will appera the "X" sign, And "menu" sign will be off.
+      display: block;
+    }
+
+    .btn-mobile-nav--icon[name="menu"] {
+      display: none;
+    }
+  }
+}

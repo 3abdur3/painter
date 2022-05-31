@@ -1,0 +1,16 @@
+.bg__video {
+  // this is child of 'testimonial-section', there we must mention 'relative'
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  &-content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    // z-index: -2;
+  }
+}

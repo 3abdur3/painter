@@ -1,0 +1,50 @@
+.about {
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
+
+  // MEDIA-QUERY
+  @include respond(normal-phone) {
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  &__img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // align-items: center;
+    background-image: linear-gradient(rgba(#339af0, 0.5), rgba(#fd7e14, 0.5)),
+      url(../img/portfolio-background.webp);
+    background-size: cover;
+
+    // MEDIA-QUERY
+    @include respond(normal-phone) {
+      display: none;
+    }
+
+    &--1 {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      width: 100%; //To see that extra 15%, we must use "z-index"
+      // z-index: 20;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    // MEDIA-QUERY
+    @include respond(normal-phone) {
+      margin: 7rem;
+    }
+
+    &-text {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 4rem;
+    }
+  }
+}

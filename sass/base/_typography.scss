@@ -1,0 +1,74 @@
+.heading-primary {
+  text-transform: uppercase;
+  color: var(--color-grey-light-1);
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
+
+    // MEDIA-QUERY
+    @include respond(small-phone) {
+      letter-spacing: 1.5rem;
+    }
+  }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+
+    // MEDIA-QUERY
+    @include respond(small-phone) {
+      letter-spacing: 1rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--color-grey-dark-1);
+  font-size: 4.2rem;
+  margin-bottom: 8rem;
+
+  &-sub {
+    font-size: 4rem;
+    line-height: 1;
+    font-style: italic;
+
+    &--light {
+      color: var(--color-grey-light-2);
+    }
+    &--dark {
+      color: var(--color-grey-light-3);
+    }
+  }
+}
+
+.subheading {
+  display: block;
+  text-transform: uppercase;
+  // margin-bottom: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.75rem;
+  color: var(--color-secondary-dark);
+}
+
+.tertiary-heading {
+  // max-width: 120rem;
+  // margin: 0 auto;
+  // padding: 0 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--sub {
+    //If we want a heading to start from a LEFT-CORNER
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,34 @@
+:root {
+  --color-grey-light-1: #fafafa;
+  --color-grey-light-2: #f0eeee;
+  --color-grey-light-3: #ccc;
+  --color-grey-light-4: #aaa;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  // --dark-blue: #101d2c; //for footer may be
+  --dark-blue: #1864ab; //for footer
+  --color-primary-light: #339af0;
+  --color-primary-dark: #1c7ed6;
+
+  --color-secondary: #f3bf91;
+  --color-secondary-light: #fd7e14;
+  --color-secondary-dark: #e8590c;
+
+  --color-optional-1: #e67e22;
+  --color-optional-2: #cf711f;
+
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+//Some SASS variables for media-query. Because CSS variables cannot be called in MEDIA-QUERY.
+$big-desktop: 112.5em; //1em=16x(1800px/16px = 112.5em)
+$laptop: 75em; //1em=16px(1200px/16px = 75em)
+$tab-land: 68.75em; //1em=16px(1100px/16px = 68.75em)
+$tab-port: 56.25em; //1em=16px(900px/16px = 56.25em)
+$large-phone: 46.88em; //1em=16px(750px/16px = 47em)
+$normal-phone: 37.5em; //1em=16px(600px/16px = 37.5em)
+$small-phone: 28.13em; //1em=16px(450px/16px = 28.13em)

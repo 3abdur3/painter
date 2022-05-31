@@ -1,0 +1,105 @@
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 9rem; //To make the sticky nav-bar, it is better to have FIXED height
+  position: relative;
+
+  // This is for mobile navigation
+  @include respond(tab-port) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    &--img {
+      height: 7rem;
+      margin-left: 5rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  &__nav {
+    // background: blue; //To test
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+
+    @include respond(tab-port) {
+      background: var(--color-secondary-light, 0.95); //can be animated
+      /*IMPORTANT: If position:fixed, then whole OPENED HAMBURGER background 
+      color never disappear when we clik on any element. Though overflowY moves. */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      transform: translateX(100%); //Normally now 'width' is no more necessary
+      z-index: 150; //must use here z-index: ;
+
+      display: flex;
+      justify-content: center;
+
+      // HIDE for TAB/mobile screen navigation now.
+      // But 'display:none' we can not animate or no transition. So we do it with "opacity"
+      opacity: 0; //step-1 (and will be shown opacity: 1 in nav-open)
+      pointer-events: none; // step-2. this property or visibility: hideen will work
+      /* IMPORTANT: Bcos we want to animate the 'width'. width:0 means, entire container
+      begins from top:0 and left/right:0 */
+      visibility: hidden; // step-3. Witout 'hidden' value, pointer would indicate the content
+      transition: all 0.8s ease-out;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+
+    // // MEDIA-QUERY (With obly mobile screen we want the MENU will apear from left side
+    @include respond(tab-port) {
+      gap: 2.5rem;
+      flex-direction: column;
+    }
+  }
+
+  &__nav-link:link,
+  &__nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 0.8rem;
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    /*IMPORTANT: If we create an border only for HOVER, then we must also create that
+    border as TRANPARENT. Otherwise, hover will shake the element*/
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      font-weight: 500;
+      padding: 1rem 2rem;
+      background: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        var(--color-grey-light-1) 50%
+      );
+      background-size: 230%;
+      // Here background-size:%, instead of 'cover', bcoz we gonna animate with hover-effect
+      transition: all 0.4s ease-in;
+    }
+  }
+
+  &__nav-link:hover,
+  &__nav-link:active {
+    border-bottom: 2px solid var(--color-secondary-light);
+
+    @include respond(tab-port) {
+      // border-bottom: 2px solid transparent;
+      color: var(--color-secondary-dark);
+      background-position: 100%;
+    }
+  }
+}

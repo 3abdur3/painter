@@ -1,0 +1,13 @@
+.container {
+  width: min(100%, 120rem);
+  // max-width: 120rem; //But min(function) is more responsive page
+  margin: 6rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: var(--shadow-dark);
+
+  //MEDIA-QUERY
+  @include respond(laptop) {
+    margin: 0;
+    // max-width: 100%; //otherwise the pint color still remains at the rightside
+  }
+}

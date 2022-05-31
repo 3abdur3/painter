@@ -1,0 +1,21 @@
+.language {
+  align-self: flex-end;
+  justify-items: flex-end;
+  margin-bottom: 1rem;
+
+  @include respond(small-phone) {
+    // flex-direction: column;
+    align-self: center;
+    justify-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 5rem;
+
+    &-img {
+      height: 2rem;
+    }
+  }
+}

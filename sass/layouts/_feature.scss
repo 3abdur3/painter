@@ -1,0 +1,88 @@
+.features {
+  padding: 5rem 5rem 3rem 5rem;
+  // background-color: var(--color-grey-light-3);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(#339af0, 0.3),
+    rgb(#1c7ed6, 0.3)
+  );
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  // grid-template-columns: min-content 1fr; //This line of code is not good practice
+  gap: 6rem;
+  margin-bottom: 10rem;
+
+  // MEDIA-QUERY
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15rem;
+  }
+
+  @include respond(large-phone) {
+    padding: 0 10rem;
+  }
+
+  @include respond(normal-phone) {
+    padding: 0 5rem;
+  }
+
+  @include respond(small-phone) {
+    grid-template-columns: 1fr;
+    padding: 0 10rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // text-align: center;
+    gap: 1rem;
+
+    background: rgba(#fff, 0.8);
+    padding: 1.5rem;
+    border-radius: 3px;
+    box-shadow: var(--shadow-light);
+    border: 3px solid var(--color-secondary);
+    // backface-visibility: hidden;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: translateY(-1.5rem);
+      /* IMPORTANT: I fwe use 'scale' [ex- transform: translateY(-1.5rem) scale(1.01)]
+      with hover effect, then the text always shakes(visually not nice) */
+    }
+  }
+
+  &__icon {
+    width: 7rem;
+    height: 7rem;
+    fill: var(--color-secondary-dark);
+    padding: 1.5rem;
+    border-radius: 50%;
+    background: var(--color-secondary);
+    margin-bottom: 1rem;
+
+    /*These 3 line of codes or FLEX(align-items:center) could do the same
+    // position: relative;
+    // top: 15%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    */
+  }
+
+  &__title {
+    font-size: 1.9rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+
+    /*These 2 line of code can be useful for CARD text alinement. To make 
+    'hyfanation' work, we need to specify in HTML lang="en" */
+    text-align: justify;
+    hyphens: auto;
+  }
+}

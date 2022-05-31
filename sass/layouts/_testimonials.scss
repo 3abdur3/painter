@@ -1,0 +1,85 @@
+.testimonials {
+  position: relative;
+  padding: 8rem 5rem;
+}
+
+.rivew {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 0 5rem 5rem 5rem;
+
+  // MEDIA-QUERY
+  @include respond(small-phone) {
+    grid-template-columns: 1fr;
+    padding: 0 5rem 3rem 5rem;
+    gap: 5rem;
+  }
+
+  &__box {
+    background-color: rgba(#f3bf91, 0.95);
+    // clip-path: polygon(
+    //   0% 0%,
+    //   100% 0%,
+    //   100% 75%,
+    //   75% 75%,
+    //   75% 100%,
+    //   70% 75%,
+    //   0% 75%
+    // );
+    border-radius: 10px;
+    // overflow: hidden;
+  }
+
+  &__user {
+    padding-top: 1.5rem;
+
+    // MEDIA-QUERY
+    @include respond(small-phone) {
+      padding: 2.5rem;
+    }
+
+    &--img {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      border: 5px solid rgba(#f3bf91, 0.5);
+      position: relative;
+      margin: -7rem 1rem 1rem 1rem;
+
+      // MEDIA-QUERY
+      @include respond(tab-port) {
+        margin: -6rem 1rem 1rem 1rem;
+      }
+      // MEDIA-QUERY
+      @include respond(normal-phone) {
+        margin: -5.5rem 1rem 1rem 1rem;
+      }
+      // MEDIA-QUERY
+      @include respond(small-phone) {
+        display: none;
+      }
+    }
+
+    &--caption {
+      padding-left: 2rem;
+      font-weight: 700;
+
+      // MEDIA-QUERY
+      @include respond(small-phone) {
+        padding-left: 2.5rem;
+      }
+    }
+  }
+
+  &__text {
+    padding: 2rem;
+    font-size: 1.7rem;
+    // color: #333;
+
+    // MEDIA-QUERY
+    @include respond(small-phone) {
+      padding: 1rem 2.5rem 2.5rem 2.5rem;
+    }
+  }
+}
