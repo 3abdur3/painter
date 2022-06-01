@@ -37,21 +37,13 @@
     }
 
     @include respond(small-phone) {
+      grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
       gap: 1rem;
     }
-
-    // &--item {
-    //   &:nth-child(1) {
-    //     // MEDIA-QUERY
-    //     @include respond(small-phone) {
-    //       // display: flex;
-    //       // // align-self: stretch;
-    //       // justify-self: stretch;
-    //       // grid-template-columns: min-content 1fr;
-    //       // grid-template-rows: 1fr;
-    //     }
-    //   }
-    // }
+    @include respond(smallest-phone) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
 
     &--link:link,
     &--link:visited {
@@ -88,6 +80,11 @@
     margin-top: 6rem;
     background-color: rgba(#339af0, 0.2);
     padding: 2rem;
+
+    @include respond(smallest-phone) {
+      display: grid;
+      grid-row: 1fr;
+    }
 
     &--text {
       font-size: 1.4rem;

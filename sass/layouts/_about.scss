@@ -6,7 +6,7 @@
 
   // MEDIA-QUERY
   @include respond(normal-phone) {
-    // grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
     grid-template-columns: 1fr;
   }
 
@@ -20,7 +20,7 @@
 
     // MEDIA-QUERY
     @include respond(normal-phone) {
-      display: none;
+      background-image: none;
     }
 
     &--1 {
@@ -28,8 +28,26 @@
       grid-row: 2 / span 1;
       width: 100%; //To see that extra 15%, we must use "z-index"
       // z-index: 20;
+
+      @include respond(normal-phone) {
+        position: relative;
+        top: 85%;
+        right: -90%;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+      }
+
+      @include respond(smallest-phone) {
+        position: relative;
+        top: 80%;
+        right: 55%;
+        width: 12rem;
+        height: 12rem;
+      }
     }
   }
+
   &__content {
     display: flex;
     flex-direction: column;

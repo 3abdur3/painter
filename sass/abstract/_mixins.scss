@@ -70,6 +70,12 @@ Here '@if' is also a directive */
     }
   }
 
+  @if $breakpoint == smallest-phone {
+    @media only screen and (max-width: $smallest-phone) {
+      @content;
+    }
+  }
+
   // FOR HAMBURGER MENU ACTIVATION
   @if $breakpoint == tablet {
     @media only screen and (min-width: $tab-port) {

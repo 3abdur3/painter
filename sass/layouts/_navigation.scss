@@ -16,6 +16,12 @@
       margin-left: 5rem;
       margin-top: 1rem;
       cursor: pointer;
+
+      @include respond(smallest-phone) {
+        height: 5rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+      }
     }
   }
 
